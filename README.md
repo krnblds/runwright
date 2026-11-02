@@ -34,6 +34,16 @@ Runwright is a Mac app that does that setup for you and then shows you what your
 | Run | `brew services` or in the app | `svc.sh` (launchd) or `run.sh` in the app |
 | Live metrics | metrics endpoint, switched on for you | from the runner's logs |
 
+## Private repositories only
+
+Only register a runner with a private GitHub repository or a private GitLab project.
+
+A runner on your Mac runs every job it is given as your macOS user, with your files, your keychain and your network. On a public repository, anyone can open a pull request or merge request that changes the pipeline, and their code then runs on your Mac. GitHub advises against self-hosted runners on public repositories for this reason.
+
+- Register runners per repository or project, not for a whole organization or group that has public repositories in it.
+- Keep the people who can push to the repository to people you trust with your Mac.
+- If a repository is made public, remove its runner first.
+
 ## Install
 
 [Download the latest DMG](https://github.com/krnblds/runwright/releases/latest), open it and drag Runwright to Applications. Requires macOS 14 or later.
