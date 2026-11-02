@@ -6,7 +6,7 @@
 
 <p align="center">Set up, register and look after self-hosted CI runners on your Mac, without the terminal.</p>
 
-<p align="center"><a href="https://github.com/krnblds/runwright/releases/latest"><b>Download for macOS</b></a> · GitLab Runner · GitHub Actions</p>
+<p align="center"><a href="#install"><b>Build for macOS</b></a> · GitLab Runner · GitHub Actions</p>
 
 ---
 
@@ -46,25 +46,28 @@ A runner on your Mac runs every job it is given as your macOS user, with your fi
 
 ## Install
 
-[Download the latest DMG](https://github.com/krnblds/runwright/releases/latest), open it and drag Runwright to Applications. Requires macOS 14 or later.
-
-### Build from source
-
-Requires Xcode 16+ (Swift 6).
+There are no prebuilt downloads: you build Runwright from source on your own Mac. Requires macOS 14 or later and Xcode 16+ (Swift 6).
 
 ```sh
-scripts/bundle.sh --install   # builds Runwright.app and the DMG, copies the app to /Applications
+git clone https://github.com/krnblds/runwright.git
+cd runwright
+scripts/bundle.sh --install   # builds Runwright.app and copies it to /Applications
 ```
 
-Or run from source with `swift run Runwright`.
+Then open Runwright from Applications; it lives in the menu bar. Running `scripts/bundle.sh` without `--install` leaves the app and a DMG in `build/`.
 
-The version comes from the `v*` tag on `HEAD` (or `VERSION`).
+To update, `git pull` and run `scripts/bundle.sh --install` again.
 
-## Releases
+The app's version is the `v*` tag on `HEAD` without its `v`, or `VERSION=1.2.0 scripts/bundle.sh` to set it. Untagged builds are `0.0.0`.
 
-Tagged versions (`v1.2.0`) are on [Releases](https://github.com/krnblds/runwright/releases), as a DMG (open it and drag Runwright to Applications) and a zip.
+### Run from source
 
-If macOS blocks the app the first time, open it with right-click → **Open**, or `xattr -dr com.apple.quarantine Runwright.app`.
+```sh
+swift run Runwright   # or open Package.swift in Xcode and run the Runwright scheme
+swift test
+```
+
+This runs a bare executable rather than the app bundle, so it has no icon and some macOS features, such as notifications, may not work. Use `scripts/bundle.sh` for everyday use.
 
 ## How it works
 
