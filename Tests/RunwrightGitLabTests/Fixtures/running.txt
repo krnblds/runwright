@@ -1,0 +1,39 @@
+# HELP gitlab_runner_version_info A metric with a constant '1' value labeled by different build stats fields.
+# TYPE gitlab_runner_version_info gauge
+gitlab_runner_version_info{architecture="arm64",branch="19-5-stable",built_at="2026-10-20 10:00:00 +0000",go_version="go1.24.4",name="gitlab-runner",os="darwin",revision="a1b2c3d4",version="19.5.2"} 1
+# HELP gitlab_runner_concurrent The current value of concurrent setting
+# TYPE gitlab_runner_concurrent gauge
+gitlab_runner_concurrent 4
+# HELP gitlab_runner_limit The current value of limit setting
+# TYPE gitlab_runner_limit gauge
+gitlab_runner_limit{runner="t3_xYz12",runner_name="kierans-mac",system_id="s_0123456789ab"} 0
+# HELP gitlab_runner_jobs_total Total jobs executed
+# TYPE gitlab_runner_jobs_total counter
+gitlab_runner_jobs_total{runner="t3_xYz12",runner_name="kierans-mac",system_id="s_0123456789ab"} 12
+# HELP gitlab_runner_failed_jobs_total Total number of failed jobs
+# TYPE gitlab_runner_failed_jobs_total counter
+gitlab_runner_failed_jobs_total{failure_reason="script_failure",runner="t3_xYz12",runner_name="kierans-mac",system_id="s_0123456789ab"} 0
+gitlab_runner_failed_jobs_total{failure_reason="runner_system_failure",runner="t3_xYz12",runner_name="kierans-mac",system_id="s_0123456789ab"} 0
+# HELP gitlab_runner_errors_total The number of caught errors.
+# TYPE gitlab_runner_errors_total counter
+gitlab_runner_errors_total{level="error"} 0
+gitlab_runner_errors_total{level="warning"} 2
+# HELP gitlab_runner_api_request_statuses_total The total number of api requests, partitioned by runner, system_id, endpoint and status.
+# TYPE gitlab_runner_api_request_statuses_total counter
+gitlab_runner_api_request_statuses_total{endpoint="request_job",runner="t3_xYz12",status="204",system_id="s_0123456789ab"} 340
+gitlab_runner_api_request_statuses_total{endpoint="request_job",runner="t3_xYz12",status="201",system_id="s_0123456789ab"} 12
+# HELP gitlab_runner_job_duration_seconds Histogram of job durations
+# TYPE gitlab_runner_job_duration_seconds histogram
+gitlab_runner_job_duration_seconds_bucket{runner="t3_xYz12",runner_name="kierans-mac",system_id="s_0123456789ab",le="30"} 2
+gitlab_runner_job_duration_seconds_bucket{runner="t3_xYz12",runner_name="kierans-mac",system_id="s_0123456789ab",le="60"} 7
+gitlab_runner_job_duration_seconds_bucket{runner="t3_xYz12",runner_name="kierans-mac",system_id="s_0123456789ab",le="300"} 12
+gitlab_runner_job_duration_seconds_bucket{runner="t3_xYz12",runner_name="kierans-mac",system_id="s_0123456789ab",le="+Inf"} 12
+gitlab_runner_job_duration_seconds_sum{runner="t3_xYz12",runner_name="kierans-mac",system_id="s_0123456789ab"} 840.5
+gitlab_runner_job_duration_seconds_count{runner="t3_xYz12",runner_name="kierans-mac",system_id="s_0123456789ab"} 12
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total 3.21
+# HELP gitlab_runner_jobs The current number of running builds.
+# TYPE gitlab_runner_jobs gauge
+gitlab_runner_jobs{executor_stage="step_script",runner="t3_xYz12",runner_name="kierans-mac",stage="test",state="running",system_id="s_0123456789ab"} 1
+gitlab_runner_jobs{executor_stage="prepare_executor",runner="t3_xYz12",runner_name="kierans-mac",stage="build",state="running",system_id="s_0123456789ab"} 1

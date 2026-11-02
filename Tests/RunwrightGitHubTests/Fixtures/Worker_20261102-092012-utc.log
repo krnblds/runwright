@@ -1,0 +1,6 @@
+[2026-11-02 09:20:12Z INFO Worker] Waiting to receive the job message from the channel.
+[2026-11-02 09:20:13Z INFO Worker] Message received.
+[2026-11-02 09:20:13Z INFO StepsRunner] Processing step: DisplayName='Set up job'
+[2026-11-02 09:20:14Z INFO StepsRunner] Processing step: DisplayName='Run actions/checkout@v4'
+[2026-11-02 09:20:19Z INFO StepsRunner] Processing step: DisplayName='Run swift build'
+[2026-11-02 09:20:19Z INFO ProcessInvokerWrapper] Starting process:

@@ -1,0 +1,15 @@
+[2026-11-02 09:11:00Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2026-11-02 09:11:00Z INFO Listener] Runner is built for OSX (ARM64) - osx-arm64.
+[2026-11-02 09:11:00Z INFO Listener] Version: 2.338.2
+[2026-11-02 09:11:01Z INFO Terminal] WRITE LINE: 
+[2026-11-02 09:11:01Z INFO Terminal] WRITE LINE: √ Connected to GitHub
+[2026-11-02 09:11:02Z INFO Terminal] WRITE LINE: 2026-11-02 09:11:02Z: Listening for Jobs
+[2026-11-02 09:12:30Z INFO JobDispatcher] Job request 4f1c2a77-1c4e-4c32-9a3a-1d3c1f0a7e21 for plan 9d2f received.
+[2026-11-02 09:12:30Z INFO Terminal] WRITE LINE: 2026-11-02 09:12:30Z: Running job: lint
+[2026-11-02 09:13:05Z INFO JobDispatcher] Worker finished for job 4f1c2a77. Code: 100
+[2026-11-02 09:13:05Z INFO Terminal] WRITE LINE: 2026-11-02 09:13:05Z: Job lint completed with result: Succeeded
+[2026-11-02 09:14:00Z INFO Terminal] WRITE LINE: 2026-11-02 09:14:00Z: Running job: unit tests (macos)
+[2026-11-02 09:16:41Z INFO JobDispatcher] Worker finished for job 7a33. Code: 102
+[2026-11-02 09:16:41Z INFO Terminal] WRITE LINE: 2026-11-02 09:16:41Z: Job unit tests (macos) completed with result: Failed
+[2026-11-02 09:20:12Z INFO Terminal] WRITE LINE: 2026-11-02 09:20:12Z: Running job: build
+[2026-11-02 09:20:12Z INFO JobDispatcher] Job request 0b9e8f10 for plan 31aa received.

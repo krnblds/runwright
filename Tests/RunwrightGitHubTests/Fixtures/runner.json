@@ -1,0 +1,13 @@
+﻿{
+  "agentId": 14,
+  "agentName": "kierans-mac",
+  "poolId": 1,
+  "poolName": "Default",
+  "disableUpdate": false,
+  "ephemeral": false,
+  "serverUrl": "https://pipelinesghubeus22.actions.githubusercontent.com/AbCdEf/",
+  "gitHubUrl": "https://github.com/krnblds/runwright",
+  "workFolder": "_work",
+  "useV2Flow": true,
+  "serverUrlV2": "https://broker.actions.githubusercontent.com/"
+}
